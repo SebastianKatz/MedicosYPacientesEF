@@ -16,7 +16,7 @@ namespace WindowssEF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMedico());
+            Application.Run(new FrmEspecialidad());
         }
     }
 }

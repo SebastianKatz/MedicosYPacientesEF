@@ -24,11 +24,11 @@ namespace Datos.Admin
         }
         public static int Modificar(Especialidad especialidad)
         {
-            Medico especialidadOrigen = context.Medicos.Find(especialidad.Id);
+            Especialidad especialidadOrigen = context.Especialidades.Find(especialidad.Id);
             if (especialidadOrigen != null)
             {
                 especialidadOrigen.Nombre = especialidad.Nombre;
-                especialidadOrigen.MedicoId = especialidad.Id;
+                especialidadOrigen.Id = especialidad.Id;
                 return context.SaveChanges();
             }
             return 0;
@@ -36,6 +36,16 @@ namespace Datos.Admin
         public static Especialidad TraerPorId(int id)
         {
             return context.Especialidades.Find(id);
+        }
+        public static int Eliminar(int id)
+        {
+            Especialidad especialidadOrigen = context.Especialidades.Find(id);
+            if (especialidadOrigen != null)
+            {
+                context.Especialidades.Remove(especialidadOrigen);
+                return context.SaveChanges();
+            }
+            return 0;
         }
     }
 }

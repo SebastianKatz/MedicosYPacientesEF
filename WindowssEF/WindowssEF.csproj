@@ -60,6 +60,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEspecialidad.Designer.cs">
+      <DependentUpon>FrmEspecialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEspecialidad.resx">
+      <DependentUpon>FrmEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMedico.resx">
       <DependentUpon>FrmMedico.cs</DependentUpon>
     </EmbeddedResource>
